@@ -1,58 +1,67 @@
 # Sistema Academia — Grupo 4
-
 Projeto Programação Orientada a Objetos
 IFMA — Ciência da Computação — 2026.2
 
-## Executar
+## Como executar
 
-Requer JDK 17.
+**Pré-requisito:** JDK 17 ou superior.
 
-Compilar:
-javac -d out app/*.java
+Na raiz do repositório, compile todos os arquivos Java:
 
-Executar:
+```bash
+javac -d out $(find src -name "*.java")
+```
+
+Depois, execute a classe principal:
+
+```bash
 java -cp out app.Main
+```
 
-## Responsabilidades
-- Pessoa 1: atividades/ - Gabriel S (putrefascia)
-- Pessoa 2: alunos/ - Anna Júlia (janna-juu)
-- Pessoa 3: turmas/ - Erasmo (ErasmoPereira0708)
-- Pessoa 4: matriculas/ - Marco Antônio (Kratonz-21)
-- Pessoa 5: core/ - Lucas Fontes (lfonteskayn)
-- Pessoa 6: app/ e relatorios/ - Marcos Chagas (morgana-boop)
+> Os arquivos devem declarar o pacote correspondente à sua pasta (`package app;`, `package alunos;` etc.). O comando de execução pressupõe que `Main.java` declara `package app;` e contém o método `public static void main(String[] args)`.
 
-## Diagrama de classes
+## Divisão de responsabilidades
 
-posso colocar 
+| Integrante | GitHub | Pacote(s) |
+|---|---|---|
+| Gabriel S | [@putrefascia](https://github.com/putrefascia) | `atividades/` |
+| Anna Júlia | [@janna-juu](https://github.com/janna-juu) | `alunos/` |
+| Erasmo | [@ErasmoPereira0708](https://github.com/ErasmoPereira0708) | `turmas/` |
+| Marco Antônio | [@Kratonz-21](https://github.com/Kratonz-21) | `matriculas/` |
+| Lucas Fontes | [@lfonteskayn](https://github.com/lfonteskayn) | `core/` |
+| Marcos Chagas | [@morgana-boop](https://github.com/morgana-boop) | `app/` e `relatorios/` |
+
+## Estrutura do projeto
+
+```text
 poo-2026-2-grupo-4/
-│
 ├── src/
-│   ├── atividades/              # Pessoa 1 — Gabriel
+│   ├── atividades/              # Gabriel S
 │   │   ├── Atividade.java
 │   │   ├── Musculacao.java
 │   │   ├── Natacao.java
 │   │   └── Pilates.java
 │   │
-│   ├── alunos/                  # Pessoa 2 — Anna Júlia
+│   ├── alunos/                  # Anna Júlia
 │   │   ├── Aluno.java
 │   │   ├── AlunoRegular.java
 │   │   ├── AlunoEstudante.java
 │   │   └── AlunoSenior.java
 │   │
-│   ├── turmas/                  # Pessoa 3 — Erasmo
+│   ├── turmas/                  # Erasmo
 │   │   ├── ComTurma.java
 │   │   └── AvaliacaoFisica.java
 │   │
-│   ├── matriculas/              # Pessoa 4 — Marco Antônio
+│   ├── matriculas/              # Marco Antônio
 │   │   └── Matricula.java
 │   │
-│   ├── core/                    # Pessoa 5 — Lucas
+│   ├── core/                    # Lucas Fontes
 │   │   └── Academia.java
 │   │
-│   ├── app/                     # Pessoa 6 — Marcos
+│   ├── app/                     # Marcos Chagas
 │   │   └── Main.java
 │   │
-│   └── relatorios/              # Pessoa 6 — Marcos
+│   └── relatorios/              # Marcos Chagas
 │       └── Relatorios.java
 │
 ├── .github/
@@ -60,6 +69,7 @@ poo-2026-2-grupo-4/
 │       └── ci.yml
 ├── .gitignore
 └── README.md
+```
 
 ## Declaração de uso de IA
 
