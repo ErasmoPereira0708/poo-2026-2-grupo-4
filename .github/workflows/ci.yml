@@ -1,0 +1,30 @@
+name: Java CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compilar projeto
+        run: |
+          mkdir -p out
+          find alunos app atividades core matriculas relatorios turmas \
+            -name '*.java' -print0 | \
+            xargs -0 javac -encoding UTF-8 -d out
