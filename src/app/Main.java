@@ -2,6 +2,7 @@ package app;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Sistema Academia - Grupo 4");
+        Menu menu = new Menu();
+        menu.executar();
     }
 }
