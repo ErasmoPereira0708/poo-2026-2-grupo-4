@@ -1,6 +1,6 @@
-# Sistema Academia — Grupo 4
+# Sistema Academia - Grupo 4
 Projeto Programação Orientada a Objetos
-IFMA — Ciência da Computação — 2026.2
+IFMA - Ciência da Computação - 2026.2
 
 ## Como executar
 
@@ -59,6 +59,7 @@ poo-2026-2-grupo-4/
 │   │   └── Academia.java
 │   │
 │   ├── app/                     # Marcos Chagas
+|   |   ├── Menu.java
 │   │   └── Main.java
 │   │
 │   └── relatorios/              # Marcos Chagas
