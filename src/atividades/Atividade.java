@@ -20,5 +20,5 @@ public abstract class Atividade {
         return this.nome;
     }
 
-    public abstract double calcularMensalidade(int percentual);
+    public abstract double calcularMensalidade();
 }
