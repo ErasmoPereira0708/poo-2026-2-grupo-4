@@ -12,11 +12,11 @@ public abstract class Aluno {
         this.cpf = cpf;
         this.idade = idade;
 
-        if(nome == null){
+        if(nome == null || nome.isBlank()){
             throw new IllegalArgumentException("Nome inválido");
         }
 
-        if (cpf == null || cpf.length() != 11){
+        if (cpf == null || !cpf.matches("[0-9]{11}")){
             throw new IllegalArgumentException("CPF Inválido");
         }
 
@@ -31,7 +31,7 @@ public abstract class Aluno {
     }
 
     public String consultarCpf(){
-        return this.cpf; // aq eu não sei se precisa necessariamente de alguma censura em qualquer parte do cpf
+        return this.cpf; // 
     }
 
     public int consultarIdade(){
