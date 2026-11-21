@@ -9,7 +9,7 @@ public class Musculacao extends Atividade {
     }
 
     @Override
-    public double calcularMensalidade(int percentual) {
+    public double calcularMensalidade() {
         return super.valorBase * MULTIPLICADOR;
     }
 }
