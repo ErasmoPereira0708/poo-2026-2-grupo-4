@@ -1,7 +1,7 @@
 package turmas;
 
 public class AvaliacaoFisica implements ComTurma{
-    private string horario;
+    private String horario;
     private int capacidadeMaxima;
     private int vagasOcupadas;
 
@@ -14,7 +14,7 @@ public class AvaliacaoFisica implements ComTurma{
         this.vagasOcupadas = 0;
     }
 
-    @Overrride
+    @Override
     public int vagasDisponiveis(){
         return capacidadeMaxima - vagasOcupadas;
     }
@@ -45,7 +45,6 @@ public class AvaliacaoFisica implements ComTurma{
         return capacidadeMaxima;
     }
 
-    @Override 
     public String descricao(){
         return "Avaliação Física | Horário: " + horario + " | Vagas disponíveis: " + vagasDisponiveis() + "/" + capacidadeMaxima + " | Valor: Gratuita (para alunos matriculados)";
     }
